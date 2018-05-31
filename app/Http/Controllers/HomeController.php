@@ -26,6 +26,12 @@ class HomeController extends Controller
         return view('index',['products' => $products,'categories' => $categories]);
     }
 
+    public function getSearch(){
+        $products = Product::latest()->get();
+        $categories = Category::all();
+        return view('search',['products' => $products,'categories' => $categories]);
+    }
+
     public function getAdminIndex(){
         $products = Product::orderBy('created_at', 'desc')->get();
         $categories = Category::all();

@@ -97,11 +97,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="col-md-4 agileinfo_new_products_grid agileinfo_new_products_grid_mobiles">
 							<div class="agile_ecommerce_tab_left mobiles_grid">
 								<div class="hs-wrapper hs-wrapper2">
-									<img src="images/p1.jpg" alt=" " class="img-responsive" />
-									<img src="images/p2.jpg" alt=" " class="img-responsive" />
-									<img src="images/p3.jpg" alt=" " class="img-responsive" />
-									<img src="images/p4.jpg" alt=" " class="img-responsive" />
-									<img src="images/p1.jpg" alt=" " class="img-responsive" /> 
+									<img src="{{asset('images/p1.jpg')}}" alt=" " class="img-responsive" />
+									<img src="{{asset('images/p2.jpg')}}" alt=" " class="img-responsive" />
+									<img src="{{asset('images/p3.jpg')}}" alt=" " class="img-responsive" />
+									<img src="{{asset('images/p4.jpg')}}" alt=" " class="img-responsive" />
+									<img src="{{asset('images/p1.jpg')}}" alt=" " class="img-responsive" /> 
 									<div class="w3_hs_bottom w3_hs_bottom_sub1">
 										<ul>
 											<li>
@@ -110,7 +110,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 										</ul>
 									</div>
 								</div>
-								<h5><a href="single.html">{{$product->name}}</a></h5>
+								<h5><a href="{{route('shop.single')}}">{{$product->name}}</a></h5>
 								<div class="simpleCart_shelfItem">
 									<p><i class="item_price">{{$product->price}}</i></p>
 									<form action="#" method="post">

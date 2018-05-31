@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Query\Builder;
 use App\Product;
 use App\Category;
 
@@ -59,6 +61,15 @@ class ProductController extends Controller
         $product->quantity = $request['quantity'];
         $product->update();
         return redirect()->route('admin.shop.index');
+    }
+
+    public function search(Request $request){
+        $searchData = $request->searchData;
+        $category = $request->category;
+        $products = Product::whereHas('category', function($query) use($category) {
+            $query->where('id', $category);
+        })->where('products.name', 'like', '%' . $searchData . '%')->get();
+        return view('search', ['products' => $products, 'catByUser' => $searchData]);
     }
 
     public function getDeleteProduct($product_id){

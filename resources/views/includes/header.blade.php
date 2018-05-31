@@ -104,16 +104,12 @@
 				<h1><a href="index.html">Electronic Store<span>Your stores. Your place.</span></a></h1>
 			</div>
 			
+			<a href="{{route('shop.search')}}">
 			<div class="search">
 				<input class="search_box" type="checkbox" id="search_box">
 				<label class="icon-search" for="search_box"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></label>
-				<div class="search_form">
-					<form action="#" method="post">
-						<input type="text" name="Search" placeholder="Search...">
-						<input type="submit" value="Send">
-					</form>
-				</div>
 			</div>
+			</a>
 			<div class="cart cart box_1"> 
 				<form action="#" method="post" class="last"> 
 					<input type="hidden" name="cmd" value="_cart" />

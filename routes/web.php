@@ -25,6 +25,16 @@ Route::get('/profile/{user_id}',[
     'as' => 'shop.profile'
 ]);
 
+Route::get('/searchresult', [
+    'uses' => 'ProductController@search',
+    'as' => 'searchresult'
+]);
+
+Route::get('/search', [
+    'uses' => 'HomeController@getSearch',
+    'as' => 'shop.search'
+]);
+
 Route::get('/single/{product_id}', [
     'uses' => 'HomeController@getSingleProduct',
     'as' => 'shop.single'

@@ -13,13 +13,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="flexslider">
 					<ul class="slides">
 						<li data-thumb="images/a.jpg">
-							<div class="thumb-image"> <img src="images/a.jpg" data-imagezoom="true" class="img-responsive" alt=""> </div>
+							<div class="thumb-image"> <img src="{{asset('images/a.jpg')}}" data-imagezoom="true" class="img-responsive" alt=""> </div>
 						</li>
 						<li data-thumb="images/b.jpg">
-							 <div class="thumb-image"> <img src="images/b.jpg" data-imagezoom="true" class="img-responsive" alt=""> </div>
+							 <div class="thumb-image"> <img src="{{asset('images/b.jpg')}}" data-imagezoom="true" class="img-responsive" alt=""> </div>
 						</li>
 						<li data-thumb="images/c.jpg">
-						   <div class="thumb-image"> <img src="images/c.jpg" data-imagezoom="true" class="img-responsive" alt=""> </div>
+						   <div class="thumb-image"> <img src="{{asset('images/c.jpg')}}" data-imagezoom="true" class="img-responsive" alt=""> </div>
 						</li> 
 					</ul>
 				</div>
